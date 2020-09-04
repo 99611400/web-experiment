@@ -1,0 +1,423 @@
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.table{
+    margin: 0 auto;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.block1{
+    padding: 0;
+    color: blue;
+    width: 800px;
+    height: 30px;
+}
+
+.block1>ul{
+    padding: 0;
+}
+
+.block1 li{
+    border:1px solid black;
+    border-collapse: collapse;
+    display: inline-block;
+    float: left;
+    height: 30px;
+    text-align: center;
+}
+
+.block1 li:first-child{
+    width: 550px;
+}
+
+.block1 li:last-child{
+    width: 250px;
+}
+
+
+.block2{
+    box-sizing: border-box;
+    color: red;
+    width: 800px;
+    height: 150px;
+    border:1px solid black;
+}
+
+
+.block2 .miniBlock21{
+    border:1px solid black;
+    width: 30%;
+    height: 100%;
+    float: left;
+}
+.block2 .miniBlock21 ul{
+    height: 100%;
+    width: 101%;
+}
+
+.block2 .miniBlock21 ul li{
+    border:1px solid black;
+    text-align: right;
+    width: 100%;
+    height: 25%;
+}
+
+
+
+
+
+
+.block2 .miniBlock22{
+    box-sizing: border-box;
+    border:1px solid black;
+    width: 53%;
+    height: 100%;
+    display: inline-block;
+    float: left;
+}
+.block2 .miniBlock22 ul{
+    box-sizing: border-box;
+    height: 102%;
+    width: 100%;
+}
+.block2 .miniBlock22 ul li{
+    box-sizing: border-box;
+    border:1px solid black;
+    width: 100%;
+    height: 25%;
+    display: inline-block;
+    float: left;
+    text-align: left;
+}
+
+
+
+
+
+.block3 {
+    color: green;
+    height: 105px;
+    width: 800px;
+    float: left;
+    border:1px solid black;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.block3 ul{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+}
+
+.block3 .miniBlock31{
+    height: 100%;
+    width: 32.5%;
+}
+.block3 .miniBlock31{
+    border:1px solid black;
+}
+.miniBlock31 ul li{
+    text-align: right;
+    height: 33.3%;
+    width: 100%;
+    border:1px solid black;
+}
+
+
+
+.block3 .miniBlock32{
+    height: 100%;
+    width: 39%;
+    border:1px solid black;
+}
+
+.miniBlock32 ul li{
+    text-align: left;
+    height: 33.3%;
+    width: 100%;
+    border:1px solid black;
+}
+
+.block3 .miniBlock33{
+    height: 100%;
+    width: 18%;
+    border:1px solid black;
+}
+.miniBlock33 ul li{
+    text-align: right;
+    height: 33.3%;
+    width: 100%;
+    border:1px solid black;
+}
+
+
+.block3 .miniBlock34{
+    height: 100%;
+    width: 18%;
+    border:1px solid black;
+}
+
+.miniBlock34 ul li{
+    text-align: left;
+    height: 33.3%;
+    width: 100%;
+    border:1px solid black;
+}
+
+.block4 {
+    height: 35px;
+    width: 800px;
+}
+.block4 .miniBlock41{
+    border:1px solid black;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.miniBlock41 li{
+    border:1px solid black;
+    height: 100%;
+}
+
+.miniBlock41 li:nth-child(1){
+    width: 30%;
+    text-align: right;
+}
+
+.miniBlock41 li:nth-child(2){
+    width: 70%;
+    text-align: left;
+}
+
+.block5{
+    box-sizing: border-box;
+    border:1px solid black;
+    height: 140px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+.block5 .miniBlock51{
+    border:1px solid black;
+    height: 25%;
+    width: 100%;
+}
+
+
+
+
+.block5 .miniBlock52{
+    border:1px solid black;
+    height: 50%;
+    width: 100%;
+    display: flex;
+}
+
+.block5 ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.block5 .miniBlock52 ul{
+    height: 100%;
+    width: 100%;
+}
+
+
+.miniBlock52 .tinyBlock521{
+    border:1px solid black;
+    height: 100%;
+    width: 32.5%;
+    text-align: right;
+}
+
+.miniBlock52 .tinyBlock522{
+    border:1px solid black;
+    height: 100%;
+    width: 39%;
+    text-align: left;
+}
+.miniBlock52 .tinyBlock523{
+    border:1px solid black;
+    height: 100%;
+    width: 18%;
+    text-align: right;
+}
+.miniBlock52 .tinyBlock524{
+    border:1px solid black;
+    height: 100%;
+    width: 18%;
+}
+
+
+.block5 .miniBlock52 ul li{
+    border:1px solid black;
+    height: 50%;
+    width: 100%;
+}
+
+
+.block5 .miniBlock53{
+    height: 25%;
+    width: 100%;
+}
+
+.miniBlock53 ul{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.miniBlock53 ul li:nth-child(1){
+    border:1px solid black;
+    height: 100%;
+    width: 30.5%;
+    text-align: right;
+}
+
+
+.block6 {
+    margin: 0;
+    padding: 0;
+    height: 800px;   /*245(7 *35) + 400 + 120 +35*/
+    width: 100%;
+}
+.block6 ul{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.block6 .miniBlock61{
+    border:1px solid black;
+    height: 4.4%;
+    width: 100%;
+}
+
+.block6 .miniBlock62{
+    border:1px solid black;
+    height: 4.4%;
+    width: 100%;
+    text-align: right;
+}
+.miniBlock62 ul li{
+    border:1px solid black;
+    height: 100%;
+}
+.miniBlock62 ul li:nth-child(1){
+    height: 100%;
+    width: 32.5%;
+}
+.miniBlock62 ul li:nth-child(2){
+    height: 100%;
+    width: 39%;
+    text-align: left;
+
+}
+.miniBlock62 ul li:nth-child(3){
+    height: 100%;
+    width: 18%;
+}
+.miniBlock62 ul li:nth-child(4){
+    height: 100%;
+    width: 18%;
+    text-align: left;
+}
+
+.block6 .miniBlock63{
+    border:1px solid black;
+    height: 91.2%;
+}
+.miniBlock63 ul{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.miniBlock63 ul li{
+    border:1px solid black;
+    display: flex;
+    height: 4.4%;
+}
+
+.miniBlock63 .childSpan1{
+    width: 30%;
+    border:1px solid black;
+    text-align: right;
+}
+
+
+#workResume {
+    height: 50%;
+}
+#workResume span:nth-child(1){
+    line-height: 365px;
+    text-align: right;
+    width: 30%;
+    border:1px solid black;
+}
+
+#workResume span:nth-child(2){
+    width: 70%;
+    border:1px solid black;
+    text-align: left;
+}
+
+
+#PersonalSkills {
+    border:1px solid black;
+    height: 15%;
+}
+#PersonalSkills span:nth-child(1){
+    border:1px solid black;
+    width: 30%;
+    text-align: right;
+    line-height: 120px;
+}
+
+
+#Achievements{
+    height: 100px;
+    line-height: 100px;
+
+}
+
+#Achievements span:nth-child(1){
+    text-align: right;
+    width: 30%;
+    border:1px solid black;
+}
+
+
+#description {
+    height: 150px;
+    width: 800px;
+    margin:0 auto;
+}

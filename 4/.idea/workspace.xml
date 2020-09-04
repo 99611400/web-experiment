@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b41e00fe-0ba5-4b84-b85b-d5e75cec93a3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/img/f22.jpg" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1gzVBgv6XSvV1h09K9ggD6HEs7r" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\尹浩男\WebstormProjects\untitled" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b41e00fe-0ba5-4b84-b85b-d5e75cec93a3" name="Default Changelist" comment="" />
+      <created>1599117274166</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599117274166</updated>
+      <workItem from="1599117287722" duration="9418000" />
+      <workItem from="1599130691795" duration="6394000" />
+      <workItem from="1599174665332" duration="13827000" />
+      <workItem from="1599191649302" duration="3000" />
+      <workItem from="1599191659615" duration="2562000" />
+      <workItem from="1599194245465" duration="3954000" />
+      <workItem from="1599207315713" duration="6013000" />
+      <workItem from="1599217529450" duration="1731000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="270" y="56" key="SettingsEditor" timestamp="1599117619757">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="270" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1599117619757" />
+    <state x="482" y="42" width="1032" height="809" key="dock-window-1" timestamp="1599197368041">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="482" y="42" width="1032" height="809" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1599197368041" />
+    <state x="809" y="189" key="run.anything.popup" timestamp="1599181645103">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="809" y="189" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1599181645103" />
+    <state x="814" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1599214435218">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="814" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1599214435218" />
+  </component>
+</project>

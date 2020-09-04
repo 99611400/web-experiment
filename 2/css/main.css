@@ -1,0 +1,31 @@
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#aaaTable{
+    margin: 0 auto;
+    padding: 0;
+    width: 750px;
+}
+
+#row1{
+    height: 45px;
+}
+#row11Name{
+    margin-right: 10px;
+}
