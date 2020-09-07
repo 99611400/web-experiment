@@ -2,6 +2,12 @@ html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+body{
+    background: #ccccff ;
+    margin: 0;
+    padding: 0;
 }
 
 ul{
@@ -17,6 +23,28 @@ li{
     padding: 0;
 }
 
+
+img{
+    border:  1px dashed #9999cc;
+    margin: 5px;
+}
 #f22description{
+    background: #9999cc ;
+    margin: 15px;
     text-align: center;
+    color: white;
+}
+h3{
+    font-size: 12px;
+    text-indent: 2em;
+    line-height: 1.5em;
+    margin: 5px;
+
+}
+
+#h31{
+    border-right: 3px double red;
+}
+#h32{
+    border-right: 3px double orange;
 }

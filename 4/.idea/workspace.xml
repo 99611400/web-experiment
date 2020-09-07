@@ -11,7 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b41e00fe-0ba5-4b84-b85b-d5e75cec93a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/f22.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WEB实验1，2.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../WEB实验1，2.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +62,8 @@
       <workItem from="1599194245465" duration="3954000" />
       <workItem from="1599207315713" duration="6013000" />
       <workItem from="1599217529450" duration="1731000" />
+      <workItem from="1599226637921" duration="983000" />
+      <workItem from="1599476809201" duration="618000" />
     </task>
     <servers />
   </component>
@@ -75,6 +80,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -84,10 +90,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1599117619757" />
-    <state x="482" y="42" width="1032" height="809" key="dock-window-1" timestamp="1599197368041">
+    <state x="797" y="0" width="634" height="809" key="dock-window-1" timestamp="1599227000958">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="482" y="42" width="1032" height="809" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1599197368041" />
+    <state x="797" y="0" width="634" height="809" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1599227000958" />
     <state x="809" y="189" key="run.anything.popup" timestamp="1599181645103">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
