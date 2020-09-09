@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <style type="text/css">
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            #formCss{
+                width: 400px;
+                height: 200px;
+                margin: 0 auto;
+            }
+            h3{
+                display: inline-block;
+            }
+            #valueButton{
+                margin-left: 100px;
+            }
+        </style>
+        <script type="text/javascript">
+            window.onload = function (){
+                let rawData = '{"name":"张三", "age":18 , "collge":{"collegeName": "计算机学院", "address": "b14-xxx"}}';
+                alert( "后端发来的字符串是" +  rawData);
+                let  myJsonData=JSON.parse(rawData);
+                let name = myJsonData.name;
+                let age = myJsonData.age;
+                let collge = myJsonData.collge.address;
+
+                let oButton = document.getElementById("valueButton");
+                let nameText = document.getElementById('name');
+                let ageText = document.getElementById("age");
+                let collegeText = document.getElementById("academy");
+                console.log(oButton)
+                oButton.onclick  = function () {
+                    nameText.value = name;
+                    ageText.value = age;
+                    collegeText.value = collge;
+                };
+            }
+
+        </script>
+    </head>
+    <body>
+        <form id="formCss" action="javascript:" >
+            <div>
+                <h3>学生姓名：</h3> <input id="name" type="text" > <br>
+                <h3>学生年龄：</h3> <input id="age" type="text"> <br>
+                <h3>学生所在学院：</h3> <input id="academy" type="text"> <br>
+            </div>
+            <input type="button" id="valueButton" value="文本框赋值" >
+
+        </form>
+    </body>
+
+
+</html>
