@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style type="text/css">
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            #formCss{
+                width: 400px;
+                height: 200px;
+                margin: 0 auto;
+            }
+            h3{
+                display: inline-block;
+            }
+            #valueButton{
+                margin-top: 20px;
+                margin-left: 100px;
+            }
+            #infomation{
+                width: 500px;
+                height: 100px;
+                margin: 0 auto;
+            }
+        </style>
+        <script type="text/javascript">
+            window.onload = function (){
+                let rawData = '{"name":"张三", "age" : 18, "college": {"collegeName": "计算机科学与技术学院","collegeAddress":"j13教学楼" }}';
+                let oinfomation = document.getElementById("infomation");
+                oinfomation.innerHTML = "后端发送过来的数据" + rawData;
+                let  student1=JSON.parse(rawData);
+                let student2 = JSON.parse(rawData);
+                let name = student1.name;
+                let age = student1.age;
+                let collegeName = student1.college.collegeName;
+                let collegeAddress = student1.college.collegeAddress;
+
+                let oButton = document.getElementById("valueButton");
+                let nameText = document.getElementById('s1');
+                let ageText = document.getElementById("age");
+                let collegeNameText = document.getElementById("collegeName");
+                let collegeAddressText = document.getElementById("collegeAddress");
+                console.log(oButton)
+                oButton.onclick  = function () {
+                    nameText.value = name;
+                    ageText.value = age;
+                    collegeNameText.value = collegeName;
+                    collegeAddressText.value = collegeAddress;
+                };
+            }
+        </script>
+    </head>
+    <body>
+        <div id="infomation">
+
+        </div>
+        <form id="formCss" action="javascript:" >
+            <div>
+                <h3>学生姓名：</h3> <input id="s1" type="text" > <br>
+                <h3>学生年龄：</h3> <input id="age" type="text"> <br>
+                <h3>学生所在学院：</h3> <input id="collegeName" type="text"> <br>
+                <h3>学院地址：</h3> <input id="collegeAddress" type="text"> <br>
+            </div>
+            <input type="button" id="valueButton" value="文本框赋值" >
+
+        </form>
+    </body>
+
+
+</html>

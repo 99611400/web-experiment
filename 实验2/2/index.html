@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style type="text/css">
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            #formCss{
+                width: 400px;
+                height: 200px;
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+            h3{
+                display: inline-block;
+            }
+            #valueButton{
+                margin-top: 20px;
+                margin-left: 100px;
+            }
+
+            #email {
+                margin-left: 27px;
+            }
+            #domain {
+                margin-left: 40px;
+            }
+            #telNum {
+                margin-left: 2px;
+            }
+            #id {
+                margin-left: 2px;
+            }
+            #password {
+                margin-left: 40px;
+            }
+            #ipAddress {
+                margin-left: 40px;
+            }
+            #inputTextArea{
+                width: 580px;
+                height: 130px;
+                margin: 0 auto;
+            }
+            #example{
+                width: 335px;
+                height: 100px;
+                margin: 0 auto;
+                margin-top: 20px;
+
+            }
+            #infomation{
+                width: 600px;
+                height: 130px;
+                margin: 0 auto;
+            }
+        </style>
+        <script type="text/javascript">
+            window.onload = function (){
+                let oButton = document.getElementById("valueButton");
+                let oEmail = document.getElementById("email");
+                let oDomain = document.getElementById("domain");
+                let oTelNum = document.getElementById("telNum");
+                let oId = document.getElementById("id");
+                let oPassword = document.getElementById("password");
+                let oIpAddress = document.getElementById("ipAddress");
+                let oInfomation = document.getElementById("infomation");
+                let oArray = new Array(oEmail,oDomain,oTelNum,oId,oPassword,oIpAddress);
+                
+                let information = "邮箱：     可以以若干字母和数字开头 ," +
+                    "但是必须中间包含 `@` 和 `.` 符号, \n" +
+                    "最后的一级域名长度在2-4位之间 \n";
+                information += "域名：   需要以http://或者https://开头，支持域名中有中划线的情况 \n";
+                information += "电话号码 ：   需要为11位且必须以1开头,第二个数字不能是2,其他数字随意 \n";
+                information += "身份证号：  需要是15位或者是18位 且符合一定的格式 考虑了以x为结尾的情况 \n";
+                information += "密码：  需要至少8位，可以是数字大小写字母 \n";
+                information += "ip地址：    可以是ipv4地址 也可以是ipv6地址 \n";
+                oInfomation.innerText = information;
+                let aa= "";
+                let boolArray = new Array(false,false,false,false,false,false);
+                let nameArray = new Array("邮箱" , "域名" ,"电话号码" ,"身份证号" ,"密码" ,"IP地址");
+
+                let emailPatten =  /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
+                let domainPatten = /^((http:\/\/)|(https:\/\/))?([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}/;
+                let telNumPatten = /^1[3456789]\d{9}$/;
+                let id18Patten = /^([1-6][1-9]|50)\d{4}(18|19|20)\d{2}((0[1-9])|10|11|12)(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/;
+                let id15Patten =  /^([1-6][1-9]|50)\d{4}\d{2}((0[1-9])|10|11|12)(([0-2][1-9])|10|20|30|31)\d{3}$/;
+                let passwordPatten = /^[a-zA-Z\d_]{8,}$/;
+                let ipAddressPatten = /^((2[0-4]\d|25[0-5]|[01]?\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)$/;
+
+                let onsubmit =function (){  //测试6个文本框输入内容是否符合要求 符合要求的话 boolArray数组的对应位为true
+                    if(emailPatten.test(oEmail.value))
+                        boolArray[0] = true;
+                    if(domainPatten.test(oDomain.value))
+                        boolArray[1] = true;
+                    if(telNumPatten.test(oTelNum.value))
+                        boolArray[2] = true;
+                    if(id15Patten.test(oId.value) || id18Patten.test(oId.value))
+                        boolArray[3] = true;
+                    if(passwordPatten.test(oPassword.value))
+                        boolArray[4] = true;
+                    if(ipAddressPatten.test(oIpAddress.value))
+                        boolArray[5] = true;
+                    for(let i =0; i<boolArray.length ;i++){
+                        if(boolArray[i]==true)
+                          aa +=  oArray[i].value +"   " + nameArray[i] + "测验通过 \n";
+                        else
+                            aa += oArray[i].value + "   " + nameArray[i] + "测验失败\n";
+                    }
+                    textarea1.value = aa;
+                    aa = "";
+                    for(let j = 0;j<boolArray.length;j++){
+                        boolArray[j] = false;
+                    }
+
+                };
+                oButton.onclick = onsubmit;
+            }
+        </script>
+    </head>
+    <body>
+
+    <div id="infomation">
+    </div>
+        <form id="formCss" action="javascript:" >
+            <div>
+                <h3>email：</h3> <input id="email" type="email" > <br>
+                <h3>域名：</h3> <input id="domain" type="text"> <br>
+                <h3>手机号码：</h3> <input id="telNum" type="tel"> <br>
+                <h3>身份证号：</h3> <input id="id" type="text"> <br>
+                <h3>密码：</h3> <input id="password" type="password"> <br>
+                <h3>地址：</h3> <input id="ipAddress" type="text"> <br>
+            </div>
+            <input type="button" id="valueButton" value="验证信息" onclick="">
+
+        </form>
+        <div id="inputTextArea">
+            <textarea id="textarea1" cols="60" rows="10"></textarea>
+        </div>
+
+    </body>
+<div id="example">
+    <h3>测试样例</h3> <br>
+    123@qq.com   验证成功<br>
+    http://baidu.com   验证成功<br>
+    13154769321  验证成功<br>
+    370873200503201458  验证成功<br>
+    qwe123  验证失败 密码至少是8位<br>
+    115.145.21.1  验证成功<br>
+</div>
+
+</html>
