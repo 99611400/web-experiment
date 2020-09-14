@@ -34,21 +34,20 @@
                 let rawData = '{"name":"张三", "age" : 18, "college": {"collegeName": "计算机科学与技术学院","collegeAddress":"j13教学楼" }}';
                 let oinfomation = document.getElementById("infomation");
                 oinfomation.innerHTML = "后端发送过来的数据" + rawData;
-                let  student1=JSON.parse(rawData);
+                let  student1=JSON.parse(rawData);  //处理字符数据 使用两个对象来存储
                 let student2 = JSON.parse(rawData);
-                let name = student1.name;
+                let name = student1.name;   //将名字 年龄 学院名称和地址用变量保存起来
                 let age = student1.age;
                 let collegeName = student1.college.collegeName;
                 let collegeAddress = student1.college.collegeAddress;
 
-                let oButton = document.getElementById("valueButton");
-                let nameText = document.getElementById('s1');
+                let oButton = document.getElementById("valueButton");  //获取dom对象 以便接下来的操作
+                let nameText = document.getElementById('s1');   //这里将会填写学生的姓名一栏
                 let ageText = document.getElementById("age");
                 let collegeNameText = document.getElementById("collegeName");
                 let collegeAddressText = document.getElementById("collegeAddress");
-                console.log(oButton)
-                oButton.onclick  = function () {
-                    nameText.value = name;
+                oButton.onclick  = function () { //点击按钮的时候触发此函数 将后台给的json数据解析后放入到文本框之中
+                    nameText.value = name;    //将
                     ageText.value = age;
                     collegeNameText.value = collegeName;
                     collegeAddressText.value = collegeAddress;

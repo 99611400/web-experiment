@@ -63,7 +63,7 @@
         </style>
         <script type="text/javascript">
             window.onload = function (){
-                let oButton = document.getElementById("valueButton");
+                let oButton = document.getElementById("valueButton"); //以下代码是用来获取dom对象 以便后期操作
                 let oEmail = document.getElementById("email");
                 let oDomain = document.getElementById("domain");
                 let oTelNum = document.getElementById("telNum");
@@ -71,7 +71,7 @@
                 let oPassword = document.getElementById("password");
                 let oIpAddress = document.getElementById("ipAddress");
                 let oInfomation = document.getElementById("infomation");
-                let oArray = new Array(oEmail,oDomain,oTelNum,oId,oPassword,oIpAddress);
+                let oArray = new Array(oEmail,oDomain,oTelNum,oId,oPassword,oIpAddress);  //将这些dom对象用数组进行存储
                 
                 let information = "邮箱：     可以以若干字母和数字开头 ," +
                     "但是必须中间包含 `@` 和 `.` 符号, \n" +
@@ -83,10 +83,10 @@
                 information += "ip地址：    可以是ipv4地址 也可以是ipv6地址 \n";
                 oInfomation.innerText = information;
                 let aa= "";
-                let boolArray = new Array(false,false,false,false,false,false);
+                let boolArray = new Array(false,false,false,false,false,false);  //该数组用于判断某一项测试是否通过了测试
                 let nameArray = new Array("邮箱" , "域名" ,"电话号码" ,"身份证号" ,"密码" ,"IP地址");
 
-                let emailPatten =  /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
+                let emailPatten =  /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;  //以下都是正则表达式
                 let domainPatten = /^((http:\/\/)|(https:\/\/))?([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}/;
                 let telNumPatten = /^1[3456789]\d{9}$/;
                 let id18Patten = /^([1-6][1-9]|50)\d{4}(18|19|20)\d{2}((0[1-9])|10|11|12)(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/;
@@ -94,7 +94,8 @@
                 let passwordPatten = /^[a-zA-Z\d_]{8,}$/;
                 let ipAddressPatten = /^((2[0-4]\d|25[0-5]|[01]?\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)$/;
 
-                let onsubmit =function (){  //测试6个文本框输入内容是否符合要求 符合要求的话 boolArray数组的对应位为true
+                let onsubmit =function (){   //当点击测试按钮的时候进行测试
+                    //测试6个文本框输入内容是否符合要求 符合要求的话 boolArray数组的对应位为true
                     if(emailPatten.test(oEmail.value))
                         boolArray[0] = true;
                     if(domainPatten.test(oDomain.value))
@@ -113,7 +114,7 @@
                         else
                             aa += oArray[i].value + "   " + nameArray[i] + "测验失败\n";
                     }
-                    textarea1.value = aa;
+                    textarea1.value = aa;    //更新文本框中的内容 显示测试结果给用户
                     aa = "";
                     for(let j = 0;j<boolArray.length;j++){
                         boolArray[j] = false;
@@ -126,8 +127,8 @@
     </head>
     <body>
 
-    <div id="infomation">
-    </div>
+        <div id="infomation">
+        </div>
         <form id="formCss" action="javascript:" >
             <div>
                 <h3>email：</h3> <input id="email" type="email" > <br>
