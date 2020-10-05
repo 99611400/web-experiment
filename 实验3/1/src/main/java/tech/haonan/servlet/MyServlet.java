@@ -18,11 +18,12 @@ import java.io.IOException;
 public class MyServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // 全部跳转到Mysevlet2.java中去
         req.getRequestDispatcher("/insideInterface").forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/insideInterface").forward(req, resp);
+        doGet(req,resp);
     }
 }
