@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class MainHandler {
-    @RequestMapping(value = "/login" , method = RequestMethod.POST)
+    @PostMapping(value = "/login" )
     public ModelAndView index(String username, String password ){
         ModelAndView modelAndView = new ModelAndView("success");
         // 存入信息 以便jsp文件中使用
