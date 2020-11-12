@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tech.haonan.dao.UserDao"> <!--namespace是接口的全类名-->
+    <select id="findAll" resultType="tech.haonan.entity.User">
+        select * from userTable
+    </select>
+    <insert id="saveUser" parameterType="tech.haonan.entity.User">
+        insert into userTable (username,password,email,tel,idNumber,salary) values (#{username},#{password},#{email},#{tel},#{idNumber},#{salary})
+    </insert>
+    <select id="getUserByUserNameAndPasswd" resultType="tech.haonan.entity.User">
+        select * from usertable where username = #{username} and password = #{password}
+    </select>
+    <select id="getUserById" resultType="tech.haonan.entity.User">
+        select * from usertable where id = #{id}
+    </select>
+    <select id="queryDuplicateOfUsername" resultType="java.lang.Integer">
+        select count(*) from userTable where username = #{username}
+    </select>
+    <select id="queryDuplicateOfEmail" resultType="java.lang.Integer">
+        select count(*) from userTable where email = #{email}
+    </select>
+    <select id="queryDuplicateOfTel" resultType="java.lang.Integer">
+        select count(*) from userTable where tel = #{tel}
+    </select>
+    <select id="queryDuplicateOfIdNumber" resultType="java.lang.Integer">
+        select count(*) from userTable where idNumber = #{idNumber}
+    </select>
+
+    <update id="updateUser" parameterType="tech.haonan.entity.User">
+       update   userTable set
+        username =  #{username}
+       , password = #{password}
+       , email = #{email}
+       , age = #{age}
+       , sex = #{sex}
+       , tel = #{tel}
+       , addr = #{addr}
+       , idNumber = #{idNumber}
+       , married = #{married}
+       , salary = #{salary}
+        where id = #{id}
+    </update>
+    <delete id="deleteUser" parameterType="java.lang.Integer">
+        delete from userTable where id = #{id}
+    </delete>
+
+    <select id="searchUser" resultType="tech.haonan.entity.User">
+        select * from userTable where 1=1
+
+        <if test='id!=null and id!=""' >
+            and id = #{id}
+        </if>
+
+        <if test='username!=null and username!=""' >
+            and username like concat('%',#{username},'%')
+        </if>
+        <if test='password!=null and password!=""' >
+            and password  = #{password}
+        </if>
+        <if test='email!=null and email!=""' >
+            and email = #{email}
+        </if>
+        <if test='age!=null and age!=""' >
+            and age = #{age}
+        </if>
+        <if test='sex!=null and sex!=""' >
+            and sex = #{sex}
+        </if>
+        <if test='tel!=null and tel!=""' >
+            and tel = #{tel}
+        </if>
+        <if test='addr!=null and addr!=""' >
+            and addr = #{addr}
+        </if>
+        <if test='idNumber!=null and idNumber!=""' >
+            and idNumber = #{idNumber}
+        </if>
+        <if test='salary!=null and salary!=""' >
+            and salary = #{salary}
+        </if>
+    </select>
+</mapper>
+

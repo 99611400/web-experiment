@@ -24,28 +24,4 @@
     <select id="queryDuplicateOfIdNumber" resultType="java.lang.Integer">
         select count(*) from userTable where idNumber = #{idNumber}
     </select>
-<!--
-    //Integer id, String username, String password, String email, Integer age, String tel, String addr, String idNumber, Integer married, Double salary
-//    @Insert("insert into userTable (username,password,email,tel,idNumber,salary) values (#{username},#{password},#{email},#{tel},#{idNumber},#{salary})")
-    public void saveUser(User user);
-
-
-//    @Select("select * from usertable where username = #{username} and password = #{password}")
-    public User getUserByUserNameAndPasswd(@Param("username") String username, @Param("password")String password);
-
-
-//    @Select("select count(*) from userTable where username = #{username}")
-    public Integer queryDuplicateOfUsername(@Param("username")String username);
-
-
-//    @Select("select count(*) from userTable where email = #{email}")
-    public Integer queryDuplicateOfEmail(@Param("email")String email);
-
-//    @Select("select count(*) from userTable where tel = #{tel}")
-    public Integer queryDuplicateOfTel(@Param("tel")String tel);
-
-//    @Select("select count(*) from userTable where idNumber = #{idNumber}")
-    public Integer queryDuplicateOfIdNumber(@Param("idNumber")String idNumber);
-
--->
 </mapper>
