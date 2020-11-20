@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.ClientDao">
+    <select id="getAllClients" resultType="com.example.demo.entity.Client">
+        select * from client
+    </select>
+
+    <delete id="deleteClientById">
+        delete from client where id = #{id}
+    </delete>
+
+    <insert id="saveClient" parameterType="com.example.demo.entity.Client">
+        insert into client values(
+            #{id},
+            #{clientName},
+            #{label},
+            #{clientType},
+            #{province},
+            #{city},
+            #{nextContactTime},
+            #{createTime},
+            #{createPerson},
+            #{clientAllocationTime},
+            #{lastContactTime},
+            #{lastContactPerson}
+        )
+    </insert>
+
+    <update id="updateClient" parameterType="com.example.demo.entity.Client">
+        update client set
+          clientName = #{clientName},
+          label = #{label},
+          clientType = #{clientType},
+          province = #{province},
+          city = #{city},
+          nextContactTime = #{nextContactTime},
+          createTime = #{createTime},
+          createPerson = #{createPerson},
+          clientAllocationTime = #{clientAllocationTime},
+          lastContactTime = #{lastContactTime},
+          lastContactPerson = #{lastContactPerson}
+        where id = #{id}
+    </update>
+    <select id="getAllCreatePerson" resultType="java.lang.String">
+        select distinct createPerson from client
+    </select>
+
+    <select id="getAllClientType" resultType="java.lang.String">
+        select distinct clientType  from client
+    </select>
+
+    <select id="GetClientsByConditions" resultType="com.example.demo.entity.Client">
+        select * from client
+        where  1 = 1
+        <if test="label != null and label != '' ">
+            and label = #{label}
+        </if>
+        <if test="clientType != null and clientType != '' ">
+            and clientType = #{clientType}
+        </if>
+        <if test="searchCreateTime != null and searchCreateTime != '' ">
+             and createTime &gt;= #{searchCreateTime.beginTime}
+             and createTime &lt;= #{searchCreateTime.endTime}
+        </if>
+        <if test="CreatePerson != null and CreatePerson != '' ">
+            and  CreatePerson = #{CreatePerson}
+        </if>
+    </select>
+
+</mapper>
+

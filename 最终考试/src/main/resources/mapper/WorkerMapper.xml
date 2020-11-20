@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tech.haonan.dao.WorkerDao"> <!--namespace是接口的全类名-->
+    <select id="searchWorker" resultType="tech.haonan.entity.Worker">
+        select * from worker where 1=1
+        <if test='workerno!=null and workerno!=""' >
+            and workerno = #{workerno}
+        </if>
+
+        <if test='workname!=null and workname!=""' >
+            and workname = #{workname}
+        </if>
+
+        <if test='workerage!=null and workerage!=""' >
+            and workerage = #{workerage}
+        </if>
+
+        <if test='workerdesc!=null and workerdesc!=""' >
+            and workerdesc = #{workerdesc}
+        </if>
+    </select>
+
+    <select id="findAll" resultType="tech.haonan.entity.Worker">
+        select * from worker
+    </select>
+
+
+</mapper>

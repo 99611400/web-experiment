@@ -1,0 +1,16 @@
+create database homework charset utf8;
+use homework;
+create table client(
+    id int primary key auto_increment comment '主键 id',
+    clientName varchar(30) comment '客户名',
+    label varchar(30) comment '标签',
+    clientType varchar(30)  comment '客户类型',
+    province varchar(30) comment '省份',
+    city varchar(30) comment '城市',
+    nextContactTime date comment '下一次联系时间',
+    createTime date comment '创建时间',
+    createPerson varchar(30) comment '创建人',
+    clientAllocationTime varchar(30) comment '客户分配时间',
+    lastContactTime date comment '最后联系时间',
+    lastContactPerson varchar(30) comment '最后联系人'
+)charset utf8;
